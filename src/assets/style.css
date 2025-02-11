@@ -3,7 +3,10 @@
   --color-light-purple-background-200: #96C6FF;
   --color-light-purple-background-400: #569EFF;
   --color-light-grey-background: #F0F0F0;
-  --color-neon-background: #d1ff7b;
+  --color-neon-background: #B8FF35;
+  --color-orange-background: #FFE07B;
+  --color-blue-background: #7BCCFF;
+  --color-salmon-background: #FFAB7B;
   --color-white: #FFFFFF;
   --color-black: #000000;
   --radius-border: 0.5rem;
@@ -195,8 +198,14 @@ body {
 
 .main-project-cards > div {
   background-color: var(--color-white);
+  border-left: 0.5rem solid var(--color-neon-background);
   border-radius: var(--radius-border);
-  padding: 1.5rem;
+  padding: 1.5rem 1.5rem 1.5rem 1rem;
+}
+
+.card {
+  display: grid;
+  grid-template-rows: 1fr 1.5rem;
 }
 
 .card-header {
@@ -207,6 +216,20 @@ body {
 .card-text {
   font-size: 0.75rem;
   font-weight: 200;
+}
+
+.card-icon {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  align-self: end;
+  justify-self: end;
+}
+
+.card-icon > img {
+  cursor: pointer;
+  width: 1.5rem;
+  height: auto;
 }
 
 .main-announcements {
@@ -274,18 +297,30 @@ body {
 
 .avatar-small {
   border-radius: 50%;
+  cursor: pointer;
   width: var(--radius-avatar-small);
   height: var(--radius-avatar-small);
-  background-color: var(--color-light-grey-background);
 }
 
 .avatar-medium {
   border-radius: 50%;
+  cursor: pointer;
   width: var(--radius-avatar-medium);
   height: var(--radius-avatar-medium);
-  background-color: var(--color-light-grey-background);
 }
 
 .avatar-user-1 {
   background-color: var(--color-neon-background);
+}
+
+.avatar-user-2 {
+  background-color: var(--color-orange-background);
+}
+
+.avatar-user-3 {
+  background-color: var(--color-blue-background);
+}
+
+.avatar-user-4 {
+  background-color: var(--color-salmon-background);
 }
